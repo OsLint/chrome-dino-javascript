@@ -6,15 +6,20 @@
 .game{
     width: 500px;
     height: 200px;
-    border: 1px solid black;
+    border: 20px solid black;
     margin: auto;
+    background-color: white;
+    border-style: double;
+    box-shadow: 4px 4px lightseagreen;
+    
 }
 #character{
     width: 20px;
     height: 50px;
-    background-color: red;
+    background-color: lightseagreen;
     position:relative;
     top: 150px;
+    box-shadow: 4px 4px black;
 }
 .animate{
     animation: jump 0.3s linear;
@@ -27,18 +32,40 @@
 }
 
 #block{
-    background-color: blue;
+    background-color: green;
     width: 20px;
     height: 20px;
     position: relative;
     top: 130px;
     left: 500px;
     animation: block 1s infinite linear;
+   box-shadow: 4px 4px black;
 }
 @keyframes block{
     0%{left: 500px}
     100%{left: -20px}
 }
 p{
+    color: black;
     text-align: center;
+    font-style: italic;
+    font-family:  'Montserrat', Arial, sans-serif;
+    text-shadow: 2px 2px lightseagreen;
+    font-size: 100px;
+
+}
+
+
+body {
+    background-image: url(".//assets/background.jpg");
+    background-color: #cccccc;
+   }
+
+h1 {
+    color: black;
+    text-align: center;
+    font-style: italic;
+    font-family: 'Montserrat', Arial, sans-serif;
+    text-shadow: 4px 4px green;
+    font-size: 150px;
 }
