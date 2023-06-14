@@ -1,26 +1,46 @@
-
-
-var character = document.getElementById("character");
+var player = document.getElementById("player");
 var block = document.getElementById("block");
 var counter = 0;
-function jump() {
-    if (character.classList == "animate") { return }
-    character.classList.add("animate");
-    setTimeout(function () {
-        character.classList.remove("animate");
-    }, 300);
+var gameStarted = false;
+
+// Function to start the game
+function startGame() {
+  gameStarted = true;
+  gameLoop();
 }
-var checkDead = setInterval(function () {
-    let characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
+
+// GameLoop Function
+function gameLoop() {
+  while (gameStarted) {
+    let playerTop = parseInt(window.getComputedStyle(player).getPropertyValue("top"));
     let blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
-    if (blockLeft < 20 && blockLeft > -20 && characterTop >= 130) {
-        block.style.animation = "none";
-        alert("Game Over score: " + Math.floor(counter / 100));
-        counter = 0;
-        block.style.animation = "block 1s infinite linear";
+    if (blockLeft < 20 && blockLeft > -20 && playerTop >= 130) {
+      block.style.animation = "none";
+      // alert("Game Over score: " + Math.floor(counter / 100));
+      counter = 0;
+      block.style.animation = "block 1s infinite linear";
     } else {
-        counter++;
-        document.getElementById("scoreSpan").innerHTML = Math.floor(counter / 100);
+      counter++;
+      document.getElementById("scoreSpan").textContent = Math.floor(counter / 100);
     }
-}, 10);
-    
+  }
+}
+
+// Function to handle the spacebar keydown event
+function handleKeyDown(event) {
+  if (event.code === "Space" && !gameStarted) { // Check for spacebar key press and game not already started
+    gameStarted = true;
+    startGame();
+  }
+}
+
+function jump() {
+  if (player.classList.contains("animate")) { return; }
+  player.classList.add("animate");
+  setTimeout(function () {
+    player.classList.remove("animate");
+  }, 300);
+}
+
+// Add event listener to the document object
+document.addEventListener("keydown", handleKeyDown);

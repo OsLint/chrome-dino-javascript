@@ -6,20 +6,21 @@
 .game{
     width: 500px;
     height: 200px;
-    border: 20px solid black;
+   /* border: 20px solid black; */
     margin: auto;
     background-color: white;
     border-style: double;
-    box-shadow: 4px 4px lightseagreen;
+   /* box-shadow: 4px 4px lightseagreen;*/
     
 }
-#character{
-    width: 20px;
+#player{
+    width: 50px;
     height: 50px;
-    background-color: lightseagreen;
-    position:relative;
+    background-image: url('assets/dinosaur.png');
+    background-size: cover; 
+    background-position: center;
+    position: relative;
     top: 150px;
-    box-shadow: 4px 4px black;
 }
 .animate{
     animation: jump 0.3s linear;
@@ -50,7 +51,7 @@ p{
     text-align: center;
     font-style: italic;
     font-family:  'Montserrat', Arial, sans-serif;
-    text-shadow: 2px 2px lightseagreen;
+   /* text-shadow: 2px 2px lightseagreen; */
     font-size: 100px;
 
 }
@@ -66,6 +67,6 @@ h1 {
     text-align: center;
     font-style: italic;
     font-family: 'Montserrat', Arial, sans-serif;
-    text-shadow: 4px 4px green;
-    font-size: 150px;
+    /* text-shadow: 4px 4px green; */
+    font-size: 50px;
 }
