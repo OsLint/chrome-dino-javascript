@@ -1,72 +1,110 @@
-*{
-    padding: 0;
-    margin: 0;
-    overflow-x: hidden;
+* {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
 }
-.game{
-    width: 500px;
-    height: 200px;
-   /* border: 20px solid black; */
-    margin: auto;
-    background-color: white;
-    border-style: double;
-   /* box-shadow: 4px 4px lightseagreen;*/
-    
+.game {
+  width: 500px;
+  height: 200px;
+  margin: auto;
+  background-color: white;
+  flex: 1 0 auto;
 }
-#player{
-    width: 50px;
-    height: 50px;
-    background-image: url('assets/dinosaur.png');
-    background-size: cover; 
-    background-position: center;
-    position: relative;
+#player {
+  width: 50px;
+  height: 50px;
+  background-image: url("assets/dinosaur.png");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  top: 150px;
+}
+.animate {
+  animation: jump 0.3s linear;
+}
+@keyframes jump {
+  0% {
     top: 150px;
-}
-.animate{
-    animation: jump 0.3s linear;
-}
-@keyframes jump{
-    0%{top: 150px;}
-    30%{top: 100px;}
-    70%{top: 100px;}
-    100%{top: 150px;}
+  }
+  30% {
+    top: 100px;
+  }
+  70% {
+    top: 100px;
+  }
+  100% {
+    top: 150px;
+  }
 }
 
-#block{
-    background-color: green;
-    width: 20px;
-    height: 20px;
-    position: relative;
-    top: 130px;
+#block {
+  background-color: green;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 130px;
+  left: 500px;
+}
+@keyframes block {
+  0% {
     left: 500px;
-    animation: block 1s infinite linear;
-   box-shadow: 4px 4px black;
+  }
+  100% {
+    left: -20px;
+  }
 }
-@keyframes block{
-    0%{left: 500px}
-    100%{left: -20px}
+#score {
+  color: black;
+  text-align: center;
+  font-style: italic;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 30px;
 }
-p{
-    color: black;
-    text-align: center;
-    font-style: italic;
-    font-family:  'Montserrat', Arial, sans-serif;
-   /* text-shadow: 2px 2px lightseagreen; */
-    font-size: 100px;
-
-}
-
 
 body {
-    background-image: url(".//assets/background.jpg");
-    background-color: #cccccc;
-   }
+  display: flex;
+  flex-direction: column;
+  background-color: #cccccc;
+}
 
 h1 {
+  color: black;
+  text-align: center;
+  font-style: italic;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 50px;
+}
+
+footer {
+  background-color: #cccccc;
+  padding: 20px;
+  text-align: center;
+  font-style: italic;
+  text-decoration: none;
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+footer a {
     color: black;
-    text-align: center;
-    font-style: italic;
-    font-family: 'Montserrat', Arial, sans-serif;
-    /* text-shadow: 4px 4px green; */
-    font-size: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+
+  }
+
+footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+}
+
+footer ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+footer  a:hover {
+  color: white;
 }
