@@ -42,5 +42,8 @@ The game is licensed under the [MIT License](LICENSE). Feel free to modify and d
 
 ## Acknowledgments 🙏
 
-This game is inspired by the Chrome offline game. 
+This game is inspired by the Chrome offline game and KnifeCircus YouTube Video. 
+🔗 [YouTube Video](https://www.youtube.com/watch?v=bG2BmmYr9NQ)
+
 Special thanks to the original creators. 👏
+
